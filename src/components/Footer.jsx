@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Tooltip from "./Tooltip";
 
 const Footer = () => {
   return (
@@ -141,18 +142,42 @@ const Footer = () => {
 
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-wrap justify-center md:justify-start gap-6 text-sm text-gray-400 mb-6 md:mb-0">
-              <a className="group relative hover:text-white transition-colors duration-300">
-                <span className="relative z-10">Privacy Policy</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
-              </a>
-              <a className="group relative hover:text-white transition-colors duration-300">
-                <span className="relative z-10">Terms of Service</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
-              </a>
-              <a className="group relative hover:text-white transition-colors duration-300">
-                <span className="relative z-10">Cookie Policy</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
-              </a>
+              <Tooltip
+                align="left"
+                content="We collect only the details needed to run your account and match you with jobs. We never sell your personal data."
+              >
+                <button
+                  type="button"
+                  className="group relative cursor-help hover:text-white focus-visible:text-white focus-visible:outline-none transition-colors duration-300"
+                >
+                  <span className="relative z-10">Privacy Policy</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity duration-300 -inset-2"></div>
+                </button>
+              </Tooltip>
+              <Tooltip
+                align="left"
+                content="By using JobPortal you agree to post accurate information and to use the platform lawfully and respectfully."
+              >
+                <button
+                  type="button"
+                  className="group relative cursor-help hover:text-white focus-visible:text-white focus-visible:outline-none transition-colors duration-300"
+                >
+                  <span className="relative z-10">Terms of Service</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity duration-300 -inset-2"></div>
+                </button>
+              </Tooltip>
+              <Tooltip
+                align="left"
+                content="We use essential cookies to keep you signed in and remember your theme. We don't use them for advertising."
+              >
+                <button
+                  type="button"
+                  className="group relative cursor-help hover:text-white focus-visible:text-white focus-visible:outline-none transition-colors duration-300"
+                >
+                  <span className="relative z-10">Cookie Policy</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity duration-300 -inset-2"></div>
+                </button>
+              </Tooltip>
               <Link
                 to="/contact"
                 className="group relative hover:text-white transition-colors duration-300"
